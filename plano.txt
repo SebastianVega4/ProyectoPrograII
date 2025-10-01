@@ -1,0 +1,52 @@
+P001|Laptop HP Pavilion|Laptop 15.6 pulgadas, 8GB RAM, 256GB SSD|3500000|10|Tecnología|true
+P002|iPhone 14 Pro|Smartphone Apple 128GB, cámara triple|4500000|8|Tecnología|true
+P003|Samsung Galaxy S23|Android 128GB, pantalla 6.1 pulgadas|3200000|12|Tecnología|true
+P004|Tablet Amazon Fire|Tablet 10 pulgadas, 32GB, Alexa|580000|25|Tecnología|true
+P005|Audífonos Sony WH-1000XM4|Audífonos inalámbricos con cancelación de ruido|1350000|15|Audio|true
+P006|Smart TV LG 55"|TV 4K UHD, WebOS, HDR|2300000|7|Electrodomésticos|true
+P007|Nintendo Switch|Consola híbrida, Joy-Con, 32GB|1150000|9|Videojuegos|true
+P008|PlayStation 5|Consola de videojuegos, 825GB|1900000|3|Videojuegos|true
+P009|Xbox Series X|Consola 1TB, 4K, Game Pass|1850000|4|Videojuegos|true
+P010|Cámara Canon EOS R6|Cámara mirrorless, 20MP, 4K|9200000|6|Fotografía|true
+P011|Drone DJI Mini 3 Pro|Drone con cámara 4K, 249g|2900000|11|Fotografía|true
+P012|Impresora Epson EcoTank|Impresora multifunción, tanque de tinta|1250000|14|Oficina|true
+P013|Monitor Dell 27"|Monitor gaming, 144Hz, QHD|1550000|18|Tecnología|true
+P014|Teclado Mecánico Logitech|Teclado gaming RGB, switches mecánicos|500000|22|Gaming|true
+P015|Mouse Razer DeathAdder|Mouse gaming, 20K DPI, RGB|310000|30|Gaming|true
+P016|Silla Gamer Corsair|Silla ergonómica, ajustable, reclinable|1150000|5|Muebles|true
+P017|Escritorio para PC|Escritorio madera, 120x60cm|350000|13|Muebles|true
+P018|Router WiFi TP-Link|Router dual band, 1800Mbps, 4 antenas|310000|20|Redes|true
+P019|Disco Duro Externo Seagate|HDD 2TB, USB 3.0, portátil|350000|25|Almacenamiento|true
+P020|SSD Samsung 1TB|Unidad estado sólido, NVMe, M.2|500000|16|Almacenamiento|true
+P021|Smartwatch Apple Watch|Reloj inteligente, GPS, 45mm|1550000|8|Wearables|true
+P022|Fitbit Charge 5|Tracker actividad, GPS, pantalla color|580000|17|Wearables|true
+P023|Altavoz JBL Flip 6|Altavoz Bluetooth, resistente al agua|460000|21|Audio|true
+P024|Micrófono Blue Yeti|Micrófono USB, condensador, trípode|500000|12|Audio|true
+P025|Lámpara LED Inteligente|Bombilla WiFi, RGB, control por app|95000|35|Hogar Inteligente|true
+P026|Termostato Nest|Termostato inteligente, programable|960000|9|Hogar Inteligente|true
+P027|Aspiradora Robot iRobot|Roomba, navegación inteligente, app|1700000|6|Electrodomésticos|true
+P028|Cafetera Nespresso|Máquina café cápsulas, 19 bares|620000|11|Electrodomésticos|true
+P029|Licuadora Oster|Licuadora profesional, 600W, vaso vidrio|270000|19|Electrodomésticos|true
+P030|Horno Microondas Samsung|Microondas 1.1 pies cúbicos, 1100W|500000|8|Electrodomésticos|true
+P031|Refrigeradora LG|Refrigeradora 2 puertas, 500L, inverter|3450000|4|Electrodomésticos|true
+P032|Lavadora Samsung|Lavadora carga frontal, 18kg, WiFi|2650000|5|Electrodomésticos|true
+P033|Bicicleta Mountain Bike|Bicicleta montaña, 21 velocidades, aluminio|1150000|7|Deportes|true
+P034|Trotadora ProForm|Trotadora plegable, 10 programas, LCD|1900000|3|Deportes|true
+P035|Mancuernas Ajustables|Par mancuernas 20kg, ajustable peso|350000|15|Deportes|true
+P036|Mochila Laptop Targus|Mochila antirrobo, compartimento laptop|190000|28|Accesorios|true
+P037|Fundas para Laptop|Funda neopreno 15.6", varios colores|75000|40|Accesorios|true
+P038|Cargador Móvil Anker|Cargador rápido 20W, USB-C, Power Delivery|100000|32|Accesorios|true
+P039|Cable USB-C 2m|Cable carga datos, nylon reforzado|50000|50|Accesorios|true
+P040|Power Bank 20000mAh|Batería externa, 2 puertos, carga rápida|180000|23|Accesorios|true
+P041|Webcam Logitech C920|Webcam 1080p, micrófono estéreo|310000|14|Video|true
+P042|Monitor 32" 4K Samsung|Monitor UHD, HDR10, FreeSync|1350000|9|Tecnología|true
+P043|Tablet Drawing Wacom|Tableta dibujo digital, sensibilidad presión|385000|11|Arte Digital|true
+P044|Kit Arduino Starter|Kit iniciación electrónica, proyectos|135000|18|Electrónica|true
+P045|Raspberry Pi 4|Mini computadora 4GB, WiFi, Bluetooth|295000|12|Electrónica|true
+P046|Dron DJI Tello|Dron educativo, programable, cámara HD|385000|16|Educación|true
+P047|Lego Technic Porsche|Set construcción coche, 1580 piezas|580000|6|Juguetes|true
+P048|Barbie Dreamhouse|Casa muñecas 3 pisos, accesorios|770000|4|Juguetes|true
+P049|Nerf Elite 2.0|Pistola dardos, 10 dardos, bomba|115000|25|Juguetes|true
+P050|Puzzle 1000 Piezas|Puzzle paisaje montañas, cartón|75000|30|Juguetes|true
+P051|Producto Agotado|Producto temporalmente sin stock|150000|0|Varios|false
+P052|Producto Descontinuado|Producto ya no disponible|200000|0|Varios|false

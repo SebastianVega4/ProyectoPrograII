@@ -1,0 +1,5 @@
+V001|P001|Juan Pérez|1|899.99|2024-01-15|Tarjeta
+V002|P005|María García|2|699.98|2024-01-16|Efectivo
+V003|P015|Carlos López|1|79.99|2024-01-17|Tarjeta
+V004|P020|Ana Rodríguez|3|389.97|2024-01-18|Transferencia
+V005|P025|Pedro Martínez|5|124.95|2024-01-19|Efectivo
