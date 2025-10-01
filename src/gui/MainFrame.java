@@ -518,49 +518,61 @@ private void showEditProductDialog(int row) {
     }
     
     private void loadData(String format) {
-        String selected = (String) objectSelector.getSelectedItem();
-        JFileChooser fileChooser = new JFileChooser();
-        fileChooser.setDialogTitle("Cargar " + selected + " desde " + format);
+    String selected = (String) objectSelector.getSelectedItem();
+    JFileChooser fileChooser = new JFileChooser();
+    fileChooser.setDialogTitle("Cargar " + selected + " desde " + format);
+    
+    if (fileChooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
+        String filename = fileChooser.getSelectedFile().getAbsolutePath();
         
-        if (fileChooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
-            String filename = fileChooser.getSelectedFile().getAbsolutePath();
-            
-            try {
-                if ("Productos".equals(selected)) {
+        try {
+            if ("Productos".equals(selected)) {
+                if ("PLAIN".equals(format)) {
+                    // Usar el nuevo método para texto plano
+                    productService.loadFromPlainFile(filename);
+                } else {
+                    // Para otros formatos usar el método existente
                     List<Product> loadedProducts = productService.loadFromFile(filename);
                     if (!loadedProducts.isEmpty()) {
-                        // Limpiar tabla antes de cargar nuevos datos
                         productService.clearProducts();
                         for (Product product : loadedProducts) {
                             productService.addProduct(product);
                         }
-                        JOptionPane.showMessageDialog(this, 
-                            loadedProducts.size() + " productos cargados exitosamente.",
-                            "Carga Exitosa", JOptionPane.INFORMATION_MESSAGE);
                     }
-                } else if ("Ventas".equals(selected)) {
+                }
+                JOptionPane.showMessageDialog(this, 
+                    "Productos cargados exitosamente.",
+                    "Carga Exitosa", JOptionPane.INFORMATION_MESSAGE);
+                    
+            } else if ("Ventas".equals(selected)) {
+                if ("PLAIN".equals(format)) {
+                    // Usar el nuevo método para texto plano
+                    saleService.loadFromPlainFile(filename);
+                } else {
+                    // Para otros formatos usar el método existente
                     List<Sale> loadedSales = saleService.loadFromFile(filename);
                     if (!loadedSales.isEmpty()) {
-                        // Limpiar tabla antes de cargar nuevos datos
                         saleService.clearSales();
                         for (Sale sale : loadedSales) {
                             saleService.addSale(sale);
                         }
-                        JOptionPane.showMessageDialog(this, 
-                            loadedSales.size() + " ventas cargadas exitosamente.",
-                            "Carga Exitosa", JOptionPane.INFORMATION_MESSAGE);
                     }
                 }
-                
-                refreshTable();
-                
-            } catch (Exception e) {
                 JOptionPane.showMessageDialog(this, 
-                    "Error al cargar datos: " + e.getMessage(),
-                    "Error", JOptionPane.ERROR_MESSAGE);
+                    "Ventas cargadas exitosamente.",
+                    "Carga Exitosa", JOptionPane.INFORMATION_MESSAGE);
             }
+            
+            refreshTable();
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, 
+                "Error al cargar datos: " + e.getMessage(),
+                "Error", JOptionPane.ERROR_MESSAGE);
+            e.printStackTrace();
         }
     }
+}
     
     private String getExtension(String format) {
         switch (format) {

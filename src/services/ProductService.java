@@ -65,6 +65,34 @@ public class ProductService implements DataService<Product> {
     }
 }
 
+    public void loadFromPlainFile(String filename) {
+    try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
+        String line;
+        // Saltar la primera línea si es encabezado
+        reader.readLine();
+        
+        while ((line = reader.readLine()) != null) {
+            String[] parts = line.split("\\|");
+            if (parts.length >= 7) {
+                String id = parts[0];
+                String name = parts[1];
+                String description = parts[2];
+                double price = Double.parseDouble(parts[3]);
+                int stock = Integer.parseInt(parts[4]);
+                String category = parts[5];
+                boolean available = Boolean.parseBoolean(parts[6]);
+                
+                Product product = new Product(id, name, description, price, stock, category);
+                product.setAvailable(available);
+                products.add(product);
+            }
+        }
+        saveProducts(); // Guardar en el formato serializado
+    } catch (Exception e) {
+        System.out.println("Error loading from plain file: " + e.getMessage());
+    }
+}
+
     public List<Product> getProducts() {
         return new ArrayList<>(products);
     }

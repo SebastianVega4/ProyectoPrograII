@@ -74,6 +74,33 @@ public class SaleService implements DataService<Sale> {
     }
 }
 
+    public void loadFromPlainFile(String filename) {
+    try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
+        String line;
+        // Saltar la primera línea si es encabezado
+        reader.readLine();
+        
+        while ((line = reader.readLine()) != null) {
+            String[] parts = line.split("\\|");
+            if (parts.length >= 7) {
+                String saleId = parts[0];
+                String productId = parts[1];
+                String customerName = parts[2];
+                int quantity = Integer.parseInt(parts[3]);
+                double totalAmount = Double.parseDouble(parts[4]);
+                Date saleDate = java.sql.Date.valueOf(parts[5]); // Asumiendo formato YYYY-MM-DD
+                String paymentMethod = parts[6];
+                
+                Sale sale = new Sale(saleId, productId, customerName, quantity, totalAmount, saleDate, paymentMethod);
+                sales.add(sale);
+            }
+        }
+        saveSales(); // Guardar en el formato serializado
+    } catch (Exception e) {
+        System.out.println("Error loading sales from plain file: " + e.getMessage());
+    }
+}
+
     public List<Sale> getSales() {
         return new ArrayList<>(sales);
     }
